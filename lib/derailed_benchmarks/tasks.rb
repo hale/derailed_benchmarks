@@ -159,7 +159,7 @@ namespace :perf do
       ram_thread = Thread.new do
         while @keep_going
           mb = ram.mb
-          STDOUT.puts mb
+          $stdout.puts mb
           file.puts mb unless ENV["SKIP_FILE_WRITE"]
           sleep 5
         end
